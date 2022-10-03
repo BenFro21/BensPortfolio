@@ -2,11 +2,39 @@ import React, {useState, useEffect} from 'react';
 import Loader from 'react-loaders';
 import './index.scss';
 import AnimatedLetters from "../AnimatedLetters"
+import portfolioData from '../../data/portfolio.json'
 
 
 const Portfolio = () => {
 const [letterClass, setLetterClass] = useState('text-animate')
+useEffect(() => {
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover')
+    }, 3000)
 
+    return () => {
+        clearTimeout(timer)
+    }   
+})
+
+const renderPortfolio = (porfolio) => {
+    return (
+        <div className="images-container">
+            {
+                porfolio.map((port, idx) => {
+                    return (
+                        <div className="image-box" key={idx}>
+                            <img 
+                            src={port.cover}
+                            className="portfolio-image"
+                            alt="portfolio"/>
+                        </div>
+                    )
+                })
+            }
+        </div>
+    )
+}
 
     return (
         <>
@@ -18,6 +46,7 @@ const [letterClass, setLetterClass] = useState('text-animate')
             idx={15} 
             /> 
         </h1>
+        <div>{renderPortfolio(portfolioData.portfolio)}</div>
 
     </div>
     <Loader type="pacman" />
