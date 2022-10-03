@@ -10,7 +10,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 const Sidebar = () => (
     <div className='nav-bar'>
         <Link className="logo" to="/">
-         <h1>Benjamin Broad</h1>
+         {/* <h1>Ben Broad</h1> */}
         </Link>
         <nav>
             <NavLink

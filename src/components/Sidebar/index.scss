@@ -67,7 +67,7 @@ nav{
     transition: all 0.3 ease-out;
  }
  &:first-child{
-    &::after{
+    &:after{
         content: 'HOME';
     }
  }

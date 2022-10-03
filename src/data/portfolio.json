@@ -4,21 +4,24 @@
             "cover": "/portfolio/jeopardy/jeopardy.PNG",
             "title": "Jeopardy Clone",
             "description": "Vanilla JavaScript, HTML, CSS, E.J.S. ",
-            "url": "https://benfro21.github.io/Jeopardy/"
+            "url": "https://benfro21.github.io/Jeopardy/",
+            "repoUrl": "https://github.com/BenFro21/Jeopardy"
             
         },
         {
             "cover": "/portfolio/cocktails/cocktails.PNG",
             "title": "Cocktails App",
             "description": "Node.js, Express, JavaScript, Google Oauth, Mongo Atlas DB, Mongoose",
-            "url": "https://cocktailrecipeapp.herokuapp.com/cocktails"
+            "url": "https://cocktailrecipeapp.herokuapp.com/cocktails",
+            "repoUrl": "https://github.com/BenFro21/Cocktail-App"
             
         },
         {
             "cover": "/portfolio/movie/main movie page.PNG",
             "title": "Movie Watchlist App",
             "description": "React, Express, node.JS, Mongoose, MongoDB ",
-            "url": "https://github.com/joshlawlor/Project-3"
+            "url": "",
+            "repoUrl": "https://github.com/joshlawlor/Project-3"
 
             
         },
@@ -26,7 +29,16 @@
             "cover": "/portfolio/budgeter/budgeter.PNG",
             "title": "Budgeter budgeting App",
             "description": "React, Django, Python, JavaScript, CSS, JWT Auth, Postgresql",
-            "url": "https://github.com/BenFro21/Budgeter"
+            "url": "",
+            "repoUrl": "https://github.com/BenFro21/Budgeter"
+            
+        },
+        {
+            "cover": "/portfolio/port/portfolio_pics.PNG",
+            "title": "Portfolio Code",
+            "description": "React, SCSS, JavaScript",
+            "url": "",
+            "repoUrl": "https://github.com/BenFro21/BensPortfolio"
             
         }
     ]
