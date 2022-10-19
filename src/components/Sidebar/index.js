@@ -1,18 +1,24 @@
 import './index.scss';
-import React from 'react'
+import React, {useState} from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import LogoS from '../../assets/images/logo-s.jpg'
 import LogoSubtitle from '../../assets/images/logo_sub.png'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBars, faEnvelope, faHome, faSuitcase, faUser} from '@fortawesome/free-solid-svg-icons'
+import {faBars, faClose, faEnvelope, faHome, faSuitcase, faUser} from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
-const Sidebar = () => (
+
+
+
+const Sidebar = () => {
+    const [showNav, setShowNav] = useState(false);
+
+  return (
     <div className='nav-bar'>
         <Link className="logo" to="/">
          {/* <h1>Ben Broad</h1> */}
         </Link>
-        <nav>
+        <nav className={showNav ? 'mobile-show' : ''}>
             <NavLink
              exact='true' 
              activeclassname='active' 
@@ -40,6 +46,13 @@ const Sidebar = () => (
              to="/portfolio">
              <FontAwesomeIcon icon={faSuitcase} color="#4d4d4d" />
             </NavLink>
+            <FontAwesomeIcon 
+            onClick={() => setShowNav(false)}
+            icon={faClose}
+            color="#ffd700"
+            size="3x"
+            className='close-icon'
+            />
         </nav>
         <ul>
             <li>
@@ -62,13 +75,20 @@ const Sidebar = () => (
             </li>
         </ul>
         <FontAwesomeIcon
+        onClick={() => setShowNav(true)}
        icon={faBars}
        color="#ffd700"
        size='3x'
        className='hamburger-icon' 
         />
-
     </div>
-)
+  )
+}
 
 export default Sidebar
+
+
+
+
+
+
